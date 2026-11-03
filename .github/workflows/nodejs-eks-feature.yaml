@@ -16,4 +16,4 @@ jobs:
   steps:
   - name: read version
     run: |
-    echo project: "${{inputs.project}}"
+     echo project: "${{ inputs.project }}"
