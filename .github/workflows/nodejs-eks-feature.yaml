@@ -10,10 +10,15 @@ on:
         description: 'Component name'
         required: true
         type: string
+env:
+ project: ${{ inputs.project }}
+ component: ${{ inputs.component }}
 jobs:
  build-nodejs:
   runs-on: ubuntu-latest
   steps:
-  - name: read version
+  - name: code checkout
+    uses: actions/checkout@v4
+  - name: Listing files
     run: |
-     echo project: "${{ inputs.project }}"
+      ls -l
