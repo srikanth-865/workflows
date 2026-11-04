@@ -15,7 +15,9 @@ env:
  component: ${{ inputs.component }}
 jobs:
  build-nodejs:
-  runs-on: ubuntu-latest
+  runs-on:
+   group: roboshop
+   labels: roboshop,nodejs-dev
   steps:
  #its like git clone of whatever in our catalogue repository
   - name: code checkout
