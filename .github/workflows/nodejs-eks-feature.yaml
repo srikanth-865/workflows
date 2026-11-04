@@ -32,4 +32,4 @@ jobs:
       echo "version=$VERSION" >> $GITHUB_OUTPUT
 
   - name: Prinitng Version
-    run: echo Version is: "${{steps.version.outputs.version}}"
+     run: echo "Version is ${{steps.version.outputs.version}}"
